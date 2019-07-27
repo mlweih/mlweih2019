@@ -2943,6 +2943,11 @@ input, select, textarea {
 			background: #fafafa;
 		}
 
+		.wrapper.style4 {
+			background: red;
+			text-align: center;
+		}
+
 		@media screen and (max-width: 1280px) {
 
 			.wrapper {
