@@ -1,5 +1,5 @@
 ///
-/// Paradigm Shift by Pixelarity
+/// Inverse by Pixelarity
 /// pixelarity.com | hello@pixelarity.com
 /// License: pixelarity.com/license
 ///
@@ -7,102 +7,14 @@
 /* Image */
 
 	.image {
+		border-radius: _size(border-radius);
 		border: 0;
 		display: inline-block;
 		position: relative;
 
 		img {
+			border-radius: _size(border-radius);
 			display: block;
-		}
-
-		&[data-position] {
-			img {
-				@include vendor('object-fit', 'cover');
-				display: block;
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-			}
-		}
-
-		&[data-position="top left"] {
-			img {
-				@include vendor('object-position', 'top left');
-			}
-		}
-
-		&[data-position="top"] {
-			img {
-				@include vendor('object-position', 'top');
-			}
-		}
-
-		&[data-position="top right"] {
-			img {
-				@include vendor('object-position', 'top right');
-			}
-		}
-
-		&[data-position="right"] {
-			img {
-				@include vendor('object-position', 'right');
-			}
-		}
-
-		&[data-position="bottom right"] {
-			img {
-				@include vendor('object-position', 'bottom right');
-			}
-		}
-
-		&[data-position="bottom"] {
-			img {
-				@include vendor('object-position', 'bottom');
-			}
-		}
-
-		&[data-position="bottom left"] {
-			img {
-				@include vendor('object-position', 'bottom left');
-			}
-		}
-
-		&[data-position="left"] {
-			img {
-				@include vendor('object-position', 'left');
-			}
-		}
-
-		&[data-position="center"] {
-			img {
-				@include vendor('object-position', 'center');
-			}
-		}
-
-		&[data-position="25% 25%"] {
-			img {
-				@include vendor('object-position', '25% 25%');
-			}
-		}
-
-		&[data-position="75% 25%"] {
-			img {
-				@include vendor('object-position', '75% 25%');
-			}
-		}
-
-		&[data-position="75% 75%"] {
-			img {
-				@include vendor('object-position', '75% 75%');
-			}
-		}
-
-		&[data-position="25% 75%"] {
-			img {
-				@include vendor('object-position', '25% 75%');
-			}
 		}
 
 		&.left,
@@ -136,35 +48,51 @@
 			}
 		}
 
-		&.main {
-			display: block;
-			margin: (_size(element-margin) * 1.5) 0;
-			width: 100%;
+		&.special {
+			box-shadow: 0px 15px 98px -20px rgba(0,0,0,0.35);
+			margin: (_size(element-margin) * 2) auto (_size(element-margin) * 2.5) auto;
+			max-width: 75%;
 
-			img {
-				width: 100%;
+			@include breakpoint('<=large') {
+				max-width: 100%;
 			}
 
-			&:first-child {
-				margin-top: 0;
+			@include breakpoint('<=medium') {
+				margin: (_size(element-margin) * 1.5) 0 (_size(element-margin) * 2) 0;
+
+				img {
+					height: 18rem;
+					object-fit: cover;
+					object-position: center center;
+				}
+			}
+
+			@include breakpoint('<=small') {
+				margin: (_size(element-margin) * 1) 0 (_size(element-margin) * 1.5) 0;
+
+				img {
+					height: 12rem;
+				}
+			}
+
+			@include breakpoint('<=xsmall') {
+				img {
+					height: 10rem;
+				}
 			}
 		}
 
-		&.fill {
-			height: 100%;
-			left: 0;
-			position: absolute;
-			top: 0;
+		&.main {
+			display: block;
+			margin: 0 0 (_size(element-margin) * 1.5) 0;
 			width: 100%;
 
 			img {
-				//@include vendor('object-fit', 'cover');
-				//@include vendor('object-position', 'center');
-				height: 100%;
-				left: 0;
-				position: absolute;
-				top: 0;
 				width: 100%;
+			}
+
+			@include breakpoint('<=small') {
+				margin: 0 0 _size(element-margin) 0;
 			}
 		}
 	}
