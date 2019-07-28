@@ -192,6 +192,10 @@ input, select, textarea {
 
 			}
 
+
+
+				}
+
 	header h1:before, header h2:before, header h3:before, header h4:before, header h5:before, header h6:before {
 		background-color: #20c5e7;
 		content: '';
@@ -354,6 +358,28 @@ input, select, textarea {
 		margin: 0 0 2rem 0;
 		padding: 1rem 0 1rem 2rem;
 	}
+
+	blockquote.special {
+		text-align: center;
+		margin: 0 auto 2rem auto;
+		max-width: 46rem;
+	}
+
+		@media screen and (max-width: 980px) {
+
+			blockquote.special {
+				max-width: calc(100% - 6rem);
+				width: 100%;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			blockquote.special {
+				max-width: 100%;
+				width: 100%;
+			}
 
 	code {
 		border-radius: 4px;
@@ -3039,6 +3065,11 @@ input, select, textarea {
 
 /* Spotlights */
 
+.intro {
+	width: 60rem;
+	margin-right: 1em;
+}
+
 	.spotlights {
 		display: -moz-flex;
 		display: -webkit-flex;
@@ -3305,6 +3336,7 @@ input, select, textarea {
 					.spotlights .intro h2 br {
 						display: none;
 					}
+
 
 				.spotlights .spotlight {
 					margin-left: 0;
