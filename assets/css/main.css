@@ -1,5 +1,6 @@
 @import url(font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i");
+/*@import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i");*/
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i&display=swap");
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -142,7 +143,7 @@ input, select, textarea {
 	}
 
 	body, input, select, textarea {
-		font-family: "Lato", Arial, Helvetica, sans-serif;
+		font-family: "Raleway", Arial, Helvetica, sans-serif;
 		font-weight: 300;
 		font-size: 1rem;
 		line-height: 2.15;
@@ -2057,7 +2058,7 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #8BDFB3;
+			background-color: #eafff4;
 		}
 
 			input[type="submit"]:hover:active,
@@ -2779,7 +2780,9 @@ input, select, textarea {
 					}
 
 				ul.feature-icons li .label {
-					display: none;
+					display: block;
+					max-width: 80%;
+					margin: auto;
 				}
 
 		}
@@ -2801,7 +2804,9 @@ input, select, textarea {
 					}
 
 				ul.feature-icons li .label {
-					display: none;
+					display: block;
+					max-width: 80%;
+					margin: auto;
 				}
 
 		}
@@ -2971,7 +2976,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background: #012621;
+			background: #057042;
 		}
 
 		.wrapper.style2 {
@@ -3474,7 +3479,7 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background: #012621;
+		background: #057042;
 		color: #ffffff;
 		cursor: default;
 		padding: 1rem 2rem;
@@ -4198,8 +4203,8 @@ input, select, textarea {
 		}
 
 		#footer .copyright {
-			background: #02422A;
-			color: rgba(255, 255, 255, 0.4);
+			background: #057042;
+			color: rgba(255, 255, 255, 0.5);
 			margin-top: 6rem;
 			padding: 4rem 2rem;
 		}
